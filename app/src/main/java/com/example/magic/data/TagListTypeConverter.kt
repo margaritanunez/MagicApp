@@ -43,4 +43,14 @@ cadenas.
 En resumen, esta clase se utiliza para convertir listas de cadenas en representaciones JSON y
 viceversa utilizando la biblioteca Gson. Esto permite que las listas de cadenas se almacenen y
 recuperen de una base de datos SQLite utilizando Room.
+
+Explicación de San Germán
+Lo primero es similar a lo que hacemos con el archivo Mapper solo que en vez de ponerlo como
+ subfuncion el lo puso como funcion directa, o sea @TypeConverter
+ // menciona que es una funcion que convierte información (creo que es dagger)
+    fun fromListToString(list: List<String>)
+    // aca crea la funcion y agrega la lista como lista de objetos
+ = Gson().toJson(list)
+ // y aca convierte la lista de objetos a json (el formato que obtenemos desde las api)
+La segunda funcion es lo contrario, pide el json y lo convierte en una lista de objetos
  */

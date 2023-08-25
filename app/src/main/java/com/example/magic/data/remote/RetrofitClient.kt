@@ -44,6 +44,12 @@ class RetrofitClient {
             máximos de espera para la conexión, la lectura y la escritura en las solicitudes y
             respuestas de los servidores remotos. Este cliente HTTP puede luego ser utilizado para
             realizar solicitudes HTTP, como obtener recursos desde un servidor, enviar datos, etc.
+
+            Explicación de San Germán
+            Lo segundo es que toda llamada a internet tiene tiempos que estara activa,
+            por ende el OkHttpClient (que es un simil de Retrofit) esta configurandose ahi para que
+            tenga 1 minuto para el timeout, 30 segundos de espera para recibir la info y 30 segundos
+            de espera para enviar la info
              */
 
             fun getRetrofitPhone() : MagicApi{
